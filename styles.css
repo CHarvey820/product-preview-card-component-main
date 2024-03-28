@@ -79,6 +79,11 @@ button{
     text-align: center;
 }
 
+button:hover{
+    background-color: var(--clr-dkBlue);
+    cursor: pointer;
+}
+
 #container {
   background-color: var(--clr-white);
   border-radius: 0.5rem;
@@ -178,3 +183,13 @@ h1{
   }
 }
 
+
+@media (min-width: 1600px){
+    #container {
+        width: 35%;
+      }
+
+      h1{
+        width: 80%;
+      }
+}
