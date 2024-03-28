@@ -1,0 +1,91 @@
+/* Given Stylings */
+:root {
+  /* colors */
+  --clr-dkCyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-dkBlue: hsl(212, 21%, 14%);
+  --clr-dkGrayishBlue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* font weights */
+  --weight-med: 500;
+  --weight-bold: 700;
+
+  /* fonts */
+  --font-montserrat: "Monsterrat", sans-serif;
+  --font-fraunces: "Fraunces", sans-serif;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--clr-cream);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container {
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.img-mobile {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+}
+
+.img-desktop {
+  display: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  width: 100%;
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* non-mobile settings */
+@media (min-width: 801px) {
+  main {
+    flex-direction: row;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .img-desktop {
+    display: block;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+}
