@@ -43,10 +43,80 @@ main {
   min-height: 100vh;
 }
 
+h1{
+    line-height: 1;
+    font-size: 2rem;
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: var(--weight-med);
+    letter-spacing: .5rem;
+    font-size: .85rem;
+}
+
+h3, .description{
+    color: var(--clr-dkGrayishBlue);
+}
+
+h3, button, .description, .originalPrice{
+    font-family: var(--font-montserrat);
+}
+
+h1, .price{
+    font-family: var(--font-fraunces);
+}
+
+button{
+    background-color: var(--clr-dkCyan);
+    color: var(--clr-white);
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 #container {
   background-color: var(--clr-white);
   border-radius: 0.5rem;
   width: 80%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem 2rem 2rem;
+    gap: 1rem;
+}
+
+.description{
+    line-height: 1.5;
+    font-weight: var(--weight-med);
+}
+
+.pricing-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price{
+    color: var(--clr-dkCyan);
+    font-size: 2rem;
+}
+
+.originalPrice{
+    color: var(--clr-dkGrayishBlue);
+    font-weight: var(--weight-med);
+    text-decoration: line-through;
+}
+
+.icon{
+    height: 1rem;
+     padding-right: 0.3rem;
 }
 
 .img-mobile {
@@ -71,21 +141,40 @@ main {
 
 /* non-mobile settings */
 @media (min-width: 801px) {
-  main {
-    flex-direction: row;
-  }
-
   #container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 50%;
+  }
+
+  .image-container{
+    width: 50%;
+  }
+
+h1{
+    font-size: 2.5rem;
+}
+
+.description{
+    font-size: 1.1rem;
+}
+
+  .content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-grow:1;
   }
 
   .img-desktop {
     display: block;
+    height: 100%;
+    object-fit: cover;
   }
 
   .img-mobile {
     display: none;
   }
 }
+
